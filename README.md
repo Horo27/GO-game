@@ -1,7 +1,9 @@
-# Titlu proiect
+# GO Game
 
 ## Descriere proiect
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+GO este un joc tip "board game" cu originar din China, vechi de peste 2500 de ani.<br>
+Proiectul vizeaza implementarea unui mediu in care 2 jucatori pot juca o partida de GO.<br>
+Acesta va tine cont de reguli si va tine evidenta unui punctaj pe tot parcusul jocului.<br> 
 
 ## Milestone #0
 
