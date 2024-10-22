@@ -1,8 +1,8 @@
 # GO Game
 
 ## Descriere proiect
-GO este un joc tip "board game" cu originar din China, vechi de peste 2500 de ani.<br>
-Proiectul vizeaza implementarea unui mediu in care 2 jucatori pot juca o partida de GO.<br>
+GO este un joc tip "board game" originar din China, vechi de peste 2500 de ani.<br>
+Proiectul vizeaza implementarea unui mediu in care 2 jucatori pot juca un meci de GO.<br>
 Acesta va tine cont de reguli si va tine evidenta unui punctaj pe tot parcusul jocului.<br> 
 
 ## Milestone #0
