@@ -53,6 +53,7 @@ add_executable(${PROJECT_NAME}
         generated/src/Player.cpp
         generated/src/Menu.cpp
         generated/src/Game.cpp
+        generated/include/Color.h
 )
 
 include(cmake/CompilerFlags.cmake)
