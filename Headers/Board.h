@@ -12,12 +12,12 @@
 class Board {
     int size;
     std::vector<std::vector<int>> board;
-
 public:
-    Board (int size = 19): size(size),board(size, std::vector<int>(size, EMPTY)) {}
+    explicit Board (int size = 19): size(size),board(size, std::vector<int>(size, EMPTY)) {}
+    friend std::ostream& operator<<(std::ostream& os, const Board& b);
+    ~Board()=default;
     void placeStone(int x, int y, Color color);
     void clearBoard(); //CLEARS THE BOARD
-    void displayBoard();
     bool isCaptured(int x, int y, Color color);
     void removeStones(int x,int y, Color color);
 };

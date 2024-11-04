@@ -1,19 +1,23 @@
 //
 // Created by Horo on 10/22/2024.
 //
-#include "../include/Board.h"
+#include "../Headers/Board.h"
 #include <vector>
 #include <iostream>
 #include <functional>
 
-void Board::displayBoard(){
-    for (int i = 0; i < size; i++) {
-        for (int j = 0; j < size; j++) {
-            std::cout << board[i][j] << " ";
+std::ostream& operator<<(std::ostream& out, const Board& b) {
+    out<<"Size: "<<b.size<<"\n";
+    out<<"Board:\n";
+
+    for(int i=0; i<b.size; i++) {
+        for(int j=0; j<b.size; j++) {
+            out << b.board[i][j] << " ";
         }
-        std::cout << std::endl;
+        out<<"\n";
     }
-    std::cout << std::endl;
+
+    return out;
 }
 
 void Board::placeStone(int x, int y, Color color) {

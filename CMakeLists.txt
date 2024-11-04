@@ -16,7 +16,7 @@ include(cmake/Options.cmake)
 ###############################################################################
 
 # external dependencies with FetchContent
-# include(FetchContent)
+# Headers(FetchContent)
 #
 # set(FETCHCONTENT_QUIET OFF)
 # set(FETCHCONTENT_UPDATES_DISCONNECTED ON)
@@ -44,16 +44,15 @@ include(cmake/Options.cmake)
 # NOTE: update executable name in .github/workflows/cmake.yml:25 when changing name here
 add_executable(${PROJECT_NAME}
     main.cpp
-    generated/src/Helper.cpp
-        generated/include/Menu.h
-        generated/include/Player.h
-        generated/include/Board.h
-        generated/include/Game.h
-        generated/src/Board.cpp
-        generated/src/Player.cpp
-        generated/src/Menu.cpp
-        generated/src/Game.cpp
-        generated/include/Color.h
+        Headers/Menu.h
+        Headers/Player.h
+        Headers/Board.h
+        Headers/Game.h
+        "Source Files/Board.cpp"
+        "Source Files/Player.cpp"
+        "Source Files/Menu.cpp"
+        "Source Files/Game.cpp"
+        Headers/Color.h
 )
 
 include(cmake/CompilerFlags.cmake)
@@ -61,9 +60,9 @@ include(cmake/CompilerFlags.cmake)
 ###############################################################################
 
 # use SYSTEM so cppcheck and clang-tidy do not report warnings from these directories
-target_include_directories(${PROJECT_NAME} SYSTEM PRIVATE generated/include)
-# target_include_directories(${PROJECT_NAME} SYSTEM PRIVATE ext/<SomeHppLib>/include)
-# target_include_directories(${PROJECT_NAME} SYSTEM PRIVATE ${<SomeLib>_SOURCE_DIR}/include)
+target_include_directories(${PROJECT_NAME} SYSTEM PRIVATE Headers)
+# target_include_directories(${PROJECT_NAME} SYSTEM PRIVATE ext/<SomeHppLib>/Headers)
+# target_include_directories(${PROJECT_NAME} SYSTEM PRIVATE ${<SomeLib>_SOURCE_DIR}/Headers)
 # target_link_directories(${PROJECT_NAME} PRIVATE ${<SomeLib>_BINARY_DIR}/lib)
 # target_link_libraries(${PROJECT_NAME} <SomeLib>)
 

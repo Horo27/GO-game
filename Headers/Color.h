@@ -1,12 +1,13 @@
 //
 // Created by Horo on 10/28/2024.
 //
-
-#include <unordered_map>
-#include <string>
+#pragma once
 
 #ifndef COLOR_H
 #define COLOR_H
+#include <unordered_map>
+#include <string>
+
 enum Color {
     EMPTY = 0,  // Empty space on the board
     WHITE = 1,  // Black stone
