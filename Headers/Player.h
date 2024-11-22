@@ -16,7 +16,6 @@ class Player {
     int territoryPoints;
 
 public:
-    Player() = default;
     explicit Player (std::string name = "NULL", const Color color = WHITE, int captures = 0, int territoryPoints = 0):
     name(std::move(name)), color(color), captures(captures), territoryPoints(territoryPoints){};
     ~Player()=default;
