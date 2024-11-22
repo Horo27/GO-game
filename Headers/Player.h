@@ -16,11 +16,12 @@ class Player {
     int territoryPoints;
 
 public:
-    explicit Player(std::string name = "NULL", const Color color = WHITE, int captures = 0, int territoryPoints = 0):
+    Player() = default;
+    explicit Player (std::string name = "NULL", const Color color = WHITE, int captures = 0, int territoryPoints = 0):
     name(std::move(name)), color(color), captures(captures), territoryPoints(territoryPoints){};
     ~Player()=default;
     friend std::ostream& operator<<(std::ostream& out, const Player& player);
     std::string getName();
 };
 
-#endif //PLAYER_H
+#endif //PLAYER_Hq

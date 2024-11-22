@@ -31,7 +31,7 @@ Player Menu::declarePlayer(Color color){
     inputMethod>> name;
     if(checkInputMethod())
         std::cout<<name<<"\n";
-    return {name, color};
+    return Player {name, color};
 }
 
 void Menu::playersMove(Player &player1, Player &player2, Board &board) {
