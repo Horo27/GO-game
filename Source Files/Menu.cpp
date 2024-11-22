@@ -81,6 +81,7 @@ void Menu::decisionMenu(Player &player1, Player &player2, Board &board) {
                 break;
             ///
             default:
+                board.clearBoard();
                 running = false;
                 std::cout<<"\nTHANK YOU FOR PLAYING!!\n";
         }
