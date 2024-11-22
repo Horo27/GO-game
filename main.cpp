@@ -1,34 +1,19 @@
-#include <algorithm>
-
 #include "./Headers/Board.h"
 #include "./Headers/Player.h"
 #include "./Headers/Menu.h"
 #include "./Headers/Game.h"
 #include <iostream>
 #include <fstream>
-#include <conio.h>
-
-using namespace std;
-
-void processInput(std::istream& input) {
-
-    int a;
-    input>>a;
-
-    std::cout<<a;
-}
 
 int main() {
 
     std::ifstream fin("tastatura.txt");
     if(!fin.is_open()) {
-        cout << "File could not be opened" << endl;
+        std::cout << "File could not be opened\n";
         return 1;
     }
 
     Game game; ///DECLAR JOCUL
-
-
 
     ///FOLOSITI menu(fin) PENTRU CITIREA DIN FISIERUL TASTATURA.TXT
     ///FOLOSITI menu PENTRU CITIREA DE LA TASTATURA

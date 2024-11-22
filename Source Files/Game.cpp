@@ -3,8 +3,6 @@
 //
 #include "../Headers/Game.h"
 
-#include <bits/atomic_base.h>
-
 std::ostream& operator<<(std::ostream& out, const Game& game) {
     out<<"Game State: "<<game.gameState<<std::endl;
     return out;

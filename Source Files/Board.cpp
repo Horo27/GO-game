@@ -1,7 +1,7 @@
 //
 // Created by Horo on 10/22/2024.
 //
-#include "../Headers/Board.h"
+#include "../Headers/Board.h"   
 #include <vector>
 #include <iostream>
 #include <functional>
