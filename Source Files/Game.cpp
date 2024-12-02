@@ -3,10 +3,6 @@
 //
 #include "../Headers/Game.h"
 
-bool Game::getState() {
-    return gameState;
-}
-
 void Game::changeState(bool state) {
     gameState = state;
 }
