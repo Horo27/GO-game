@@ -41,10 +41,13 @@ void Menu::playersMove(Player &player1, Player &player2, Board &board) {
 
     int x, y;
 
+
+
     std::cout<<player1.getName()<<" muta in pozitia: ";
     inputMethod>>x>>y;
     if(checkInputMethod())
         std::cout<<x<<" "<<y<<"\n";
+
     board.placeStone(x,y,WHITE);
 
     std::cout<<player2.getName()<<" muta in pozitia: ";
@@ -103,3 +106,11 @@ void showMenu() {
 bool Menu::checkInputMethod() const {
     return &inputMethod != &std::cin;
 }
+
+Menu &Menu::operator=(const Menu &other) {
+    if(this == &other)
+        return *this;
+    this->turnNumber = other.turnNumber;
+    return *this;
+}
+

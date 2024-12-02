@@ -3,11 +3,12 @@
 //
 #include "../Headers/Game.h"
 
-std::ostream& operator<<(std::ostream& out, const Game& game) {
-    out<<"Game State: "<<game.gameState<<std::endl;
-    return out;
+bool Game::getState() {
+    return gameState;
 }
 
 void Game::changeState(bool state) {
-    this->gameState = state;
+    gameState = state;
 }
+
+

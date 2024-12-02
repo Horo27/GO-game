@@ -3,13 +3,14 @@
 //
 #pragma once
 #include "Color.h"
+#include "Game.h"
 #ifndef PLAYER_H
 #define PLAYER_H
 
 #include <string>
 #include <utility>
 
-class Player {
+class Player : public Game{
     std::string name;
     Color color; //1 for white 2 for black
     int captures;
@@ -21,6 +22,9 @@ public:
     ~Player()=default;
     friend std::ostream& operator<<(std::ostream& out, const Player& player);
     std::string getName();
+
+    Player(const Player &other) : name(other.name), color(other.color), captures(other.captures), territoryPoints(other.territoryPoints) {};
+    Player& operator=(const Player& other);
 };
 
 #endif //PLAYER_Hq

@@ -6,10 +6,11 @@
 #define BOARD_H
 
 #include "Color.h"
+#include "Game.h"
 #include <iostream>
 #include <vector>
 
-class Board {
+class Board : public Game{
     int size;
     std::vector<std::vector<int>> board;
 public:
@@ -20,6 +21,9 @@ public:
     void clearBoard(); //CLEARS THE BOARD
     bool isCaptured(int x, int y, Color color);
     void removeStones(int x,int y, Color color);
+
+    Board (Board& other): size(other.size), board(other.board) {}
+    Board& operator=(const Board& other);
 };
 
 #endif //BOARD_H

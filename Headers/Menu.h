@@ -8,10 +8,12 @@
 #include <fstream>
 #include <iostream>
 #include <string>
+
+#include "Game.h"
 #ifndef MENU_H
 #define MENU_H
 
-class Menu {
+class Menu : public Game{
     std::istream& inputMethod;
     int turnNumber;
 public:
@@ -23,6 +25,9 @@ public:
     void playersMove(Player &player1, Player &player2, Board &board);
     void decisionMenu(Player &player1, Player &player2, Board &board);
     bool checkInputMethod() const;
+
+    Menu(const Menu& other):inputMethod(other.inputMethod), turnNumber(other.turnNumber){};
+    Menu& operator=(const Menu& other);
 };
 
 #endif //MENU_H

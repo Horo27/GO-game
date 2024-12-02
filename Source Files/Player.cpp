@@ -3,6 +3,7 @@
 //
 #include "../Headers/Player.h"
 #include "../Headers/Board.h"
+#include "../Headers/Menu.h"
 #include <iostream>
 #include <string>
 
@@ -19,3 +20,15 @@ std::ostream& operator<<(std::ostream& out, const Player& player) {
 std::string Player::getName() {
     return this->name;
 }
+
+Player &Player::operator=(const Player &other) {
+    if(this==&other)
+        return *this;
+    this->name = other.name;
+    this->color = other.color;
+    this->captures = other.captures;
+    this->territoryPoints = other.territoryPoints;
+    return *this;
+}
+
+

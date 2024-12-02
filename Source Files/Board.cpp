@@ -96,3 +96,11 @@ void Board::removeStones(int x, int y, Color color) {
 
     dfs(x,y);
 }
+
+Board &Board::operator=(const Board &other) {
+    if(this == &other)
+        return *this;
+    size = other.size;
+    board = other.board;
+    return *this;
+}
