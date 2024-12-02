@@ -10,7 +10,7 @@
 #include <string>
 #include <utility>
 
-class Player : public Game{
+class Player{
     std::string name;
     Color color; //1 for white 2 for black
     int captures;

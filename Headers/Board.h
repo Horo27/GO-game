@@ -10,7 +10,7 @@
 #include <iostream>
 #include <vector>
 
-class Board : public Game{
+class Board {
     int size;
     std::vector<std::vector<int>> board;
 public:

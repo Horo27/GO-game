@@ -13,7 +13,7 @@
 #ifndef MENU_H
 #define MENU_H
 
-class Menu : public Game{
+class Menu{
     std::istream& inputMethod;
     int turnNumber;
 public:

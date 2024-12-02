@@ -10,8 +10,8 @@
 class Game {
      bool gameState;
 public:
-    Game() = default;
-    explicit Game(bool game_state): gameState(game_state) {}
+     explicit Game(bool game_state): gameState(game_state) {}
+    Game()=default;
      ~Game() = default;
     //friend std::ostream& operator<<(std::ostream& out, const Game& game);
     bool getState();
