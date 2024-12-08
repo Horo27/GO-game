@@ -4,7 +4,8 @@
 #include "../Headers/Board.h"   
 #include <vector>
 #include <iostream>
-#include <functional>
+#include "Rules.h"
+#include "CaptureRule.h"
 
 std::ostream& operator<<(std::ostream& out, const Board& b) {
     out<<"Size: "<<b.size<<"\n";
@@ -19,7 +20,7 @@ std::ostream& operator<<(std::ostream& out, const Board& b) {
 
     return out;
 }
-
+/*
 void Board::placeStone(int x, int y, Color color) {
     if(board[x][y] == EMPTY) {
         board[x][y] = color;
@@ -37,7 +38,7 @@ void Board::placeStone(int x, int y, Color color) {
                     removeStones(nx,ny,opponentColor);
         }
     }
-}
+}*/
 
 void Board::clearBoard() {
     for (int i = 0; i < size; i++) {
@@ -46,7 +47,7 @@ void Board::clearBoard() {
         }
     }
 }
-
+/*
 bool Board::isCaptured(int x, int y, Color color) {
     std::vector<std::vector<bool>> visited(size, std::vector<bool>(size, false));
     const std::vector<std::pair<int, int>> directions = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
@@ -95,7 +96,7 @@ void Board::removeStones(int x, int y, Color color) {
     };
 
     dfs(x,y);
-}
+}*/
 
 Board &Board::operator=(const Board &other) {
     if(this == &other)

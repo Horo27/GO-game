@@ -22,6 +22,7 @@ public:
     ~Player()=default;
     friend std::ostream& operator<<(std::ostream& out, const Player& player);
     std::string getName();
+    Color getColor(){return color;};
 
     Player(const Player &other) : name(other.name), color(other.color), captures(other.captures), territoryPoints(other.territoryPoints) {};
     Player& operator=(const Player& other);

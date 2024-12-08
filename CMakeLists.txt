@@ -53,6 +53,13 @@ add_executable(${PROJECT_NAME}
         "Source Files/Menu.cpp"
         "Source Files/Game.cpp"
         Headers/Color.h
+        Headers/Rules.h
+        "Source Files/Rules.cpp"
+        Headers/CaptureRule.h
+        "Source Files/CaptureRule.cpp"
+        "Headers/PlaceRule.h"
+        "Source Files/PlaceRule.cpp"
+        Headers/Exceptions.h
 )
 
 include(cmake/CompilerFlags.cmake)

@@ -23,6 +23,7 @@ public:
     Board declareBoard();
     Player declarePlayer(Color color);
     void playersMove(Player &player1, Player &player2, Board &board);
+    void untilValidMove(Player &player, Board &board);
     void decisionMenu(Player &player1, Player &player2, Board &board);
     bool checkInputMethod() const;
 

@@ -4,9 +4,12 @@
 #include "../Headers/Menu.h"
 #include "../Headers/Board.h"
 #include "../Headers/Player.h"
+#include "PlaceRule.h"
+#include "../Headers/Exceptions.h"
 #include <iostream>
 #include <fstream>
 #include <ostream>
+#include <memory>
 
 std::ostream& operator<<(std::ostream& out, const Menu& m) {
 
@@ -34,27 +37,57 @@ Player Menu::declarePlayer(Color color){
     return Player {name, color};
 }
 
+void Menu::untilValidMove(Player &player, Board &board) {
+
+    std::shared_ptr<Rules> ptrBase = std::make_shared<Rules>(board);
+
+
+    int ok =1;
+    int lin;
+    int col;
+
+    std::cout<<player.getName()<<" muta in pozitia: ";
+    inputMethod>>lin>>col;
+    if(checkInputMethod())
+        std::cout<<lin<<" "<<col<<"\n";
+
+    while(ok) {
+        try {
+            if(!ptrBase->basicRule(lin,col)) {
+                throw customException("There's already a stone there, choose another spot");
+            }else {
+                throw 'ok';
+            }
+        }
+        catch(customException e) {
+            std::cout<<e.what()<<"\n";
+
+            std::cout<<player.getName()<<" muta in pozitia: ";
+            inputMethod>>lin>>col;
+            if(checkInputMethod())
+                std::cout<<lin<<" "<<col<<"\n";
+        }
+        catch(...) {
+            ok=0;
+        }
+    }
+
+    PlaceRule rule(board);
+    CaptureRule capture(board);
+
+    Rules::setColor(player.getColor());
+    rule.PlaceStone(lin, col);
+
+}
+
+
 void Menu::playersMove(Player &player1, Player &player2, Board &board) {
     turnNumber++;
     std::cout<<"TURA CU NUMARUL "<<turnNumber<<std::endl;
     std::cout<<std::endl;
 
-    int x, y;
-
-
-
-    std::cout<<player1.getName()<<" muta in pozitia: ";
-    inputMethod>>x>>y;
-    if(checkInputMethod())
-        std::cout<<x<<" "<<y<<"\n";
-
-    board.placeStone(x,y,WHITE);
-
-    std::cout<<player2.getName()<<" muta in pozitia: ";
-    inputMethod>>x>>y;
-    if(checkInputMethod())
-        std::cout<<x<<" "<<y<<"\n";
-    board.placeStone(x,y,BLACK);
+    untilValidMove(player1,board);
+    untilValidMove(player2,board);
 
 }
 

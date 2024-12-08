@@ -2,8 +2,11 @@
 #include "./Headers/Player.h"
 #include "./Headers/Menu.h"
 #include "./Headers/Game.h"
+#include "./Headers/Rules.h"
 #include <iostream>
 #include <fstream>
+
+#include "CaptureRule.h"
 
 int main() {
 
@@ -21,8 +24,11 @@ int main() {
     Menu menu(fin);
     //Menu menu;
 
+    //DE INLOCUIT X Y CU LIN COL
+
     ///DECLAR TABLA SI JUCATORII
     Board board = menu.declareBoard();
+
     Player player1 = menu.declarePlayer(WHITE);
     Player player2 = menu.declarePlayer(BLACK);
 
