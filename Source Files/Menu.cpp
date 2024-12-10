@@ -55,11 +55,10 @@ void Menu::untilValidMove(Player &player, Board &board) {
         try {
             if(!ptrBase->basicRule(lin,col)) {
                 throw customException("There's already a stone there, choose another spot");
-            }else {
-                throw 'ok';
             }
+            throw std::exception();
         }
-        catch(customException e) {
+        catch(customException &e) {
             std::cout<<e.what()<<"\n";
 
             std::cout<<player.getName()<<" muta in pozitia: ";
