@@ -1,7 +1,7 @@
 //
 // Created by Horo on 12/6/2024.
 //
-#include "PlaceRule.h"
+#include "../Headers/PlaceRule.h"
 #include <memory>
 
 void PlaceRule::PlaceStone(int lin, int col) {
