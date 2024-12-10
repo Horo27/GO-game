@@ -4,7 +4,7 @@
 #include "../Headers/Menu.h"
 #include "../Headers/Board.h"
 #include "../Headers/Player.h"
-#include "PlaceRule.h"
+#include "../Headers/PlaceRule.h"
 #include "../Headers/Exceptions.h"
 #include <iostream>
 #include <fstream>

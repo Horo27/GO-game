@@ -2,16 +2,15 @@
 // Created by Horo on 10/22/2024.
 //
 #pragma once
+
+#ifndef MENU_H
+#define MENU_H
+
 #include "Board.h"
 #include "Player.h"
 #include "Color.h"
 #include <fstream>
 #include <iostream>
-#include <string>
-
-#include "Game.h"
-#ifndef MENU_H
-#define MENU_H
 
 class Menu{
     std::istream& inputMethod;

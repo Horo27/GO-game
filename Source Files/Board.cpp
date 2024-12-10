@@ -4,8 +4,7 @@
 #include "../Headers/Board.h"   
 #include <vector>
 #include <iostream>
-#include "Rules.h"
-#include "CaptureRule.h"
+#include "../Headers/PlaceRule.h"
 
 std::ostream& operator<<(std::ostream& out, const Board& b) {
     out<<"Size: "<<b.size<<"\n";

@@ -2,11 +2,10 @@
 // Created by Horo on 10/22/2024.
 //
 #pragma once
-#include "Color.h"
-#include "Game.h"
 #ifndef PLAYER_H
 #define PLAYER_H
 
+#include "Color.h"
 #include <string>
 #include <utility>
 

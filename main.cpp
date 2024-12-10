@@ -2,11 +2,8 @@
 #include "./Headers/Player.h"
 #include "./Headers/Menu.h"
 #include "./Headers/Game.h"
-#include "./Headers/Rules.h"
 #include <iostream>
 #include <fstream>
-
-#include "CaptureRule.h"
 
 int main() {
 

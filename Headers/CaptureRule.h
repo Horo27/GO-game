@@ -6,7 +6,6 @@
 #define CAPTURERULE_H
 
 #include "Rules.h"
-#include "Color.h"
 
 class CaptureRule : public Rules{
 

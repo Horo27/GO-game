@@ -4,7 +4,6 @@
 #include "../Headers/Player.h"
 #include "../Headers/Board.h"
 #include "../Headers/Menu.h"
-#include <iostream>
 #include <string>
 
 std::ostream& operator<<(std::ostream& out, const Player& player) {

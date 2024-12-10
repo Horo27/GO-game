@@ -1,11 +1,12 @@
 //
 // Created by Horo on 12/6/2024.
 //
-#pragma once
-#include "Board.h"
+
 
 #ifndef RULES_H
 #define RULES_H
+
+#include "Board.h"
 
 class Rules {
     protected:

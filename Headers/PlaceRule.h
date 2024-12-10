@@ -7,7 +7,6 @@
 
 #include "Rules.h"
 #include "CaptureRule.h"
-#include "Color.h"
 
 class PlaceRule : public Rules {
 

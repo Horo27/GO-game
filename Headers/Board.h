@@ -6,7 +6,6 @@
 #define BOARD_H
 
 #include "Color.h"
-#include "Game.h"
 #include <iostream>
 #include <vector>
 

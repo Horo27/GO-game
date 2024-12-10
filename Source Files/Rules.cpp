@@ -1,8 +1,8 @@
 //
 // Created by Horo on 12/6/2024.
 //
-#include "Rules.h"
-#include "Color.h"
+#include "../Headers/Rules.h"
+#include "../Headers/Color.h"
 
 Color Rules::color = WHITE;
 
