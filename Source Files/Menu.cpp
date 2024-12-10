@@ -48,7 +48,7 @@ void Menu::untilValidMove(Player &player, Board &board) {
     inputMethod>>lin>>col;
     if(checkInputMethod())
         std::cout<<lin<<" "<<col<<"\n";
-
+/*
     while(true) {
         try {
             if(!ptrBase->basicRule(lin,col)) {
@@ -67,7 +67,7 @@ void Menu::untilValidMove(Player &player, Board &board) {
         catch(...) {
             break;
         }
-    }
+    }*/
 
     PlaceRule rule(board);
     CaptureRule capture(board);
