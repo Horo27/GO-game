@@ -1,7 +1,7 @@
 //
 // Created by Horo on 12/6/2024.
 //
-#include "CaptureRule.h"
+#include "../Headers/CaptureRule.h"
 #include <functional>
 
 bool CaptureRule::basicRule(int lin, int col) {

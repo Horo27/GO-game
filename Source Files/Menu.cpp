@@ -41,8 +41,6 @@ void Menu::untilValidMove(Player &player, Board &board) {
 
     std::shared_ptr<Rules> ptrBase = std::make_shared<Rules>(board);
 
-
-    int ok =1;
     int lin;
     int col;
 
@@ -51,12 +49,12 @@ void Menu::untilValidMove(Player &player, Board &board) {
     if(checkInputMethod())
         std::cout<<lin<<" "<<col<<"\n";
 
-    while(ok) {
+    while(true) {
         try {
             if(!ptrBase->basicRule(lin,col)) {
                 throw customException("There's already a stone there, choose another spot");
             }
-            throw std::exception();
+            break;
         }
         catch(customException &e) {
             std::cout<<e.what()<<"\n";
@@ -67,7 +65,7 @@ void Menu::untilValidMove(Player &player, Board &board) {
                 std::cout<<lin<<" "<<col<<"\n";
         }
         catch(...) {
-            ok=0;
+            break;
         }
     }
 
