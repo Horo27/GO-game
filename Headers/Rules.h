@@ -6,6 +6,8 @@
 #ifndef RULES_H
 #define RULES_H
 
+#include <memory>
+
 #include "Board.h"
 
 class Rules {
@@ -18,8 +20,8 @@ class Rules {
     virtual ~Rules() = default;
     virtual bool basicRule(int lin, int col);
 
-    friend class CaptureRule;
-    friend class PlaceRule;
+    //friend class CaptureRule;
+    //friend class PlaceRule;
 
     static void setColor(const Color other) {color = other;}
 };
