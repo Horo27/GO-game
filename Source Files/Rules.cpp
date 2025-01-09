@@ -7,7 +7,8 @@
 Color Rules::color = WHITE;
 
 bool Rules::basicRule(int lin, int col) {
-    if(board.board[lin][col] != EMPTY)
+    auto *derviedPtr = dynamic_cast<BoardProduct*>(board);
+    if(derviedPtr->board[lin][col] != EMPTY)
         return false;
     return true;
 }

@@ -8,15 +8,15 @@
 
 #include <memory>
 
-#include "Board.h"
+#include "Factory.h"
 
 class Rules {
     protected:
-    Board &board;
+    Product *board;
     static Color color;
 
     public:
-    explicit Rules(Board &board): board(board){}
+    explicit Rules(Product *board): board(board){}
     virtual ~Rules() = default;
     virtual bool basicRule(int lin, int col);
 

@@ -60,6 +60,10 @@ add_executable(${PROJECT_NAME}
         "Headers/PlaceRule.h"
         "Source Files/PlaceRule.cpp"
         Headers/Exceptions.h
+        Headers/Factory.h
+        "Source Files/PlayerProduct.cpp"
+        "Source Files/BoardProduct.cpp"
+        Headers/Commands.h
 )
 
 include(cmake/CompilerFlags.cmake)

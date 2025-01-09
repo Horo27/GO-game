@@ -18,7 +18,7 @@ std::ostream& operator<<(std::ostream& out, const Menu& m) {
     return out;
 }
 
-Board Menu::declareBoard(){
+/*Board Menu::declareBoard(){
     int size;
     std::cout<<"Select the board size: ";
     inputMethod>>size;
@@ -35,9 +35,10 @@ Player Menu::declarePlayer(Color color){
     if(checkInputMethod())
         std::cout<<name<<"\n";
     return Player {name, color};
-}
+}*/
 
-void Menu::untilValidMove(Player &player, Board &board) {
+
+void Menu::untilValidMove(Product *player, Product *board) {
 
     std::shared_ptr<Rules> ptrBase = std::make_shared<Rules>(board);
 
@@ -78,7 +79,7 @@ void Menu::untilValidMove(Player &player, Board &board) {
 }
 
 
-void Menu::playersMove(Player &player1, Player &player2, Board &board) {
+void Menu::playersMove(Product *player1, Product *player2, Product *board) {
     turnNumber++;
     std::cout<<"TURA CU NUMARUL "<<turnNumber<<std::endl;
     std::cout<<std::endl;
